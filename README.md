@@ -63,3 +63,149 @@ Write a function `timesTwo` that receives an array of numbers and returns a new 
 timesTwo([1, 2, 3, 4]) //returns [2, 4, 6, 8]
 timesTwo([3, 1, 10, 2]) //returns [6, 2, 20, 4]
 ````
+
+### FOR VS WHILE 
+````javascript 
+for (var i = 0; i < 10; i++) {
+	console.log("hello")
+}
+
+//logs hello 10 times
+
+
+var i = 0
+while (i < 10) {
+	console.log("hello")
+	i += 1
+}
+
+````
+
+### FUNCTIONS INSIDE FUNCTIONS 
+
+myMap([], fn)
+
+[1, 2, 3, 4, 5].map(function(a){return a + 1}) => [2, 3, 4, 5, 6]
+
+var fn = function(a) {return a + 1}
+function myMap(arr, fn) {
+	var output = []
+	for(var i = 0; i < arr.length; i++) {
+		output.push(fn(arr[i]))
+	}
+
+	return output
+}
+
+function myMapWithForEach(arr, fn) {
+	var output = []
+	arr.forEach(function(a) {
+		output.push(fn(a))
+	})
+
+	return output
+}
+
+#Practice Assessment 
+### Q1-Answer 
+while (this is true) {
+	//do this code here
+}
+
+while (CONDITION => true or false) {
+	//do this code
+}
+
+### Q2-Answer 
+````html 
+<div id="greeting">Hello World</div>
+````
+````css 
+#greeting {
+	color: rebeccapurple;
+}
+
+### Q3-Answer 
+````````html 
+<span class="pokemon">Pikachu</span>
+````
+````css 
+.pokemon {
+	color: yellow;
+}
+````
+
+### Q4-Answer 
+````html
+<a href="http://www.c4q.nyc/">Coalition for Queens</a>
+````
+
+### Q5-Answer 
+````javascript
+function wackyCase(str) {
+	var newString = ''
+	for (var i = 0; i < str.length; i++) {
+		if (i % 2 === 0) {
+			newString += str[i].toUpperCase()
+		} else {
+			newString += str[i].toLowerCase()
+		}
+	}
+
+	return newString
+}
+````
+
+### Q6-Answer 
+1 and then 0 
+
+### Q7-Answer 
+````javascript
+function intro(obj) {
+	return "Hi my name is " + obj.name + " and Im " obj.age + "."
+}
+````
+### Q8-Answer
+````javascript 
+function sumTwoArrays(arrOne, arrTwo) {
+	var sum = 0 
+	for (var i = 0; i < arrOne.length, i++) {
+		sum += arrOne[i]
+	}
+
+	for (var i = 0; i < arrTwo.length, i++) {
+			sum += arrTwo[i]
+		}
+
+	return sum 
+}
+````
+
+### Q9-Answer 
+````javascript
+function popShift(str) {
+	str = str.split('')
+
+	//removing the first and last letter
+	var first = str.shift()
+	var last = str.pop()
+
+	//swapping them
+	str.unshift(last)
+	str.push(first)
+
+	return str.join('')
+}
+````
+
+### Q10-Answer 
+````javascript
+function timesTwo(arr) {
+	var output = []
+	for (var i = 0; i < arr.length; i++) {
+		output.push(arr[i] * 2)
+	}
+
+	return output
+}
+````
